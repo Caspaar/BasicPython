@@ -1,0 +1,13 @@
+tab = [3,5,1,2,4]
+
+def sortuj(tab):
+    for i in range(len(tab)):
+        j = len(tab)-1
+        while j > i:
+            if tab[j] < tab[j-1]:
+                nowaTab = tab[j]
+                tab[j] = tab[j-1]
+                tab[j-1] = nowaTab
+            j = j - 1
+    return tab
+print(sortuj(tab))
